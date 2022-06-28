@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Sep 2021 pada 20.12
--- Versi server: 10.1.37-MariaDB
--- Versi PHP: 5.6.39
+-- Generation Time: Jun 25, 2021 at 02:39 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ref_anak`
+-- Table structure for table `ref_anak`
 --
 
 CREATE TABLE `ref_anak` (
@@ -40,11 +40,11 @@ CREATE TABLE `ref_anak` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `ref_anak`
+-- Dumping data for table `ref_anak`
 --
 
 INSERT INTO `ref_anak` (`id_anak`, `nama_anak`, `nik_anak`, `tempat_lahir_anak`, `tgl_lahir_anak`, `usia_anak`, `jk_anak`, `id_ibu`) VALUES
-(1, 'Cinta', '3789322983879004', 'Bandung ', '2021-02-10', 2, 'L', 4),
+(1, 'Kevin Trestu', '3789322983879004', 'Bandung', '2021-02-10', 2, 'L', 4),
 (3, 'Daffa Aqila', '3782118902922901', 'Jakarta', '2021-03-01', 1, 'L', 5),
 (4, 'Hendriyan ', '12345678998675', 'Garut', '2017-02-25', 4, 'L', 6),
 (5, 'Silvie Angeline', '3795399302099930', 'Bandung ', '2021-02-20', 2, 'P', 1),
@@ -54,7 +54,7 @@ INSERT INTO `ref_anak` (`id_anak`, `nama_anak`, `nik_anak`, `tempat_lahir_anak`,
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ref_bantuan`
+-- Table structure for table `ref_bantuan`
 --
 
 CREATE TABLE `ref_bantuan` (
@@ -66,7 +66,7 @@ CREATE TABLE `ref_bantuan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `ref_bantuan`
+-- Dumping data for table `ref_bantuan`
 --
 
 INSERT INTO `ref_bantuan` (`id_bantuan`, `nama`, `pesan`, `email`, `tanggal`) VALUES
@@ -75,7 +75,7 @@ INSERT INTO `ref_bantuan` (`id_bantuan`, `nama`, `pesan`, `email`, `tanggal`) VA
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ref_ibu`
+-- Table structure for table `ref_ibu`
 --
 
 CREATE TABLE `ref_ibu` (
@@ -88,21 +88,22 @@ CREATE TABLE `ref_ibu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `ref_ibu`
+-- Dumping data for table `ref_ibu`
 --
 
 INSERT INTO `ref_ibu` (`id_ibu`, `nama_ibu`, `nik_ibu`, `alamat_ibu`, `no_telp_ibu`, `foto_ibu`) VALUES
+(1, 'Violeta Aprillia', '3785922890392029', 'Jl. Cibaduyut Raya', '089655784438', NULL),
 (2, 'Farida Zahra', '3785322893902983', 'Jl. Moh Toha', '089766424694', NULL),
 (3, 'Indriani Kurnia', '3704922939904984', 'Jl. Astana Anyar', '089755894390', NULL),
 (4, 'Anisa Aulia', '3784333920298398', 'Jl. Cibaduyut Raya', '089644893828', NULL),
-(5, 'Virgiva Nazwa', '3785433892839093', 'Jl. Cibaduyut Raya  ', '089644893022', NULL),
-(6, 'Haryani', '192011919321', 'Komplek Dodo Regency No.69', '0812345678987', NULL),
-(7, 'Wanda Caterine', '3722811902093992', 'Jl. Antapani', '089644390902', NULL);
+(5, 'Vira Nazwa Septiani', '3785433892839093', 'Jl. Cibaduyut Raya  ', '089644893022', NULL),
+(6, 'Haryani Lubis', '192011919321', 'Komplek Dodo Regency No.69', '0812345678987', NULL),
+(7, 'Wulandari', '3722811902093992', 'Jl. Antapani', '089644390902', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ref_imunisasi`
+-- Table structure for table `ref_imunisasi`
 --
 
 CREATE TABLE `ref_imunisasi` (
@@ -119,7 +120,7 @@ CREATE TABLE `ref_imunisasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `ref_imunisasi`
+-- Dumping data for table `ref_imunisasi`
 --
 
 INSERT INTO `ref_imunisasi` (`id_imunisasi`, `tgl_imunisasi`, `usia_saat_vaksin`, `tinggi_badan`, `berat_badan`, `periode`, `id_vaksin`, `id_anak`, `id_petugas`, `id_ibu`) VALUES
@@ -129,7 +130,7 @@ INSERT INTO `ref_imunisasi` (`id_imunisasi`, `tgl_imunisasi`, `usia_saat_vaksin`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ref_login`
+-- Table structure for table `ref_login`
 --
 
 CREATE TABLE `ref_login` (
@@ -140,7 +141,7 @@ CREATE TABLE `ref_login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `ref_login`
+-- Dumping data for table `ref_login`
 --
 
 INSERT INTO `ref_login` (`id_login`, `username`, `password`, `id_petugas_login`) VALUES
@@ -150,7 +151,7 @@ INSERT INTO `ref_login` (`id_login`, `username`, `password`, `id_petugas_login`)
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ref_petugas`
+-- Table structure for table `ref_petugas`
 --
 
 CREATE TABLE `ref_petugas` (
@@ -167,18 +168,19 @@ CREATE TABLE `ref_petugas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `ref_petugas`
+-- Dumping data for table `ref_petugas`
 --
 
 INSERT INTO `ref_petugas` (`id_petugas`, `nama_petugas`, `jabatan_petugas`, `jk_petugas`, `tempat_lahir_petugas`, `tgl_lahir_petugas`, `alamat_petugas`, `no_telp_petugas`, `foto_petugas`, `status_petugas`) VALUES
-(2, 'Kevin Farel', 'Petugas 2', 'L', 'Bandung', '1983-05-19', 'Jl. Buah Batu', '089319902737', NULL, 'Aktif'),
-(3, 'Arya Permana', 'Ketua Pokja 1', 'L', 'Jakarta', '1987-10-20', 'Jl. Cibaduyut Raya', '089643392093', NULL, 'Aktif'),
-(4, 'Supriadi Armalawi', 'Ketua Pokja 2', 'L', 'Jakarta', '1988-10-21', 'Jl. Moh.toha', '089333902209 ', NULL, 'Pasif');
+(1, 'Angga Cahya Purnomo', 'Petugas 1', 'L', 'Bandung', '1988-06-19', 'Jl. Leuwi Panjang', '089319092891', NULL, 'Aktif'),
+(2, 'Kevin Farel Saputra', 'Petugas 2', 'L', 'Bandung', '1983-05-19', 'Jl. Buah Batu', '089319902737', NULL, 'Aktif'),
+(3, 'Arya Permana Kurniawan', 'Ketua Pokja 1', 'L', 'Jakarta', '1987-10-20', 'Jl. Cibaduyut Raya', '089643392093', NULL, 'Aktif'),
+(4, 'Supriadi Azhar', 'Ketua Pokja 2', 'L', 'Jakarta', '1988-10-21', 'Jl. Moh.toha', '089333902209 ', NULL, 'Pasif');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ref_posyandu`
+-- Table structure for table `ref_posyandu`
 --
 
 CREATE TABLE `ref_posyandu` (
@@ -193,7 +195,7 @@ CREATE TABLE `ref_posyandu` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ref_vaksin`
+-- Table structure for table `ref_vaksin`
 --
 
 CREATE TABLE `ref_vaksin` (
@@ -202,10 +204,11 @@ CREATE TABLE `ref_vaksin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `ref_vaksin`
+-- Dumping data for table `ref_vaksin`
 --
 
 INSERT INTO `ref_vaksin` (`id_vaksin`, `nama_vaksin`) VALUES
+(1, 'HB'),
 (2, 'BCG'),
 (3, 'DPT 1'),
 (4, 'DPT 2'),
@@ -224,101 +227,101 @@ INSERT INTO `ref_vaksin` (`id_vaksin`, `nama_vaksin`) VALUES
 --
 
 --
--- Indeks untuk tabel `ref_anak`
+-- Indexes for table `ref_anak`
 --
 ALTER TABLE `ref_anak`
   ADD PRIMARY KEY (`id_anak`);
 
 --
--- Indeks untuk tabel `ref_bantuan`
+-- Indexes for table `ref_bantuan`
 --
 ALTER TABLE `ref_bantuan`
   ADD PRIMARY KEY (`id_bantuan`);
 
 --
--- Indeks untuk tabel `ref_ibu`
+-- Indexes for table `ref_ibu`
 --
 ALTER TABLE `ref_ibu`
   ADD PRIMARY KEY (`id_ibu`);
 
 --
--- Indeks untuk tabel `ref_imunisasi`
+-- Indexes for table `ref_imunisasi`
 --
 ALTER TABLE `ref_imunisasi`
   ADD PRIMARY KEY (`id_imunisasi`);
 
 --
--- Indeks untuk tabel `ref_login`
+-- Indexes for table `ref_login`
 --
 ALTER TABLE `ref_login`
   ADD PRIMARY KEY (`id_login`);
 
 --
--- Indeks untuk tabel `ref_petugas`
+-- Indexes for table `ref_petugas`
 --
 ALTER TABLE `ref_petugas`
   ADD PRIMARY KEY (`id_petugas`);
 
 --
--- Indeks untuk tabel `ref_posyandu`
+-- Indexes for table `ref_posyandu`
 --
 ALTER TABLE `ref_posyandu`
   ADD PRIMARY KEY (`id_posyandu`);
 
 --
--- Indeks untuk tabel `ref_vaksin`
+-- Indexes for table `ref_vaksin`
 --
 ALTER TABLE `ref_vaksin`
   ADD PRIMARY KEY (`id_vaksin`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `ref_anak`
+-- AUTO_INCREMENT for table `ref_anak`
 --
 ALTER TABLE `ref_anak`
   MODIFY `id_anak` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `ref_bantuan`
+-- AUTO_INCREMENT for table `ref_bantuan`
 --
 ALTER TABLE `ref_bantuan`
   MODIFY `id_bantuan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `ref_ibu`
+-- AUTO_INCREMENT for table `ref_ibu`
 --
 ALTER TABLE `ref_ibu`
   MODIFY `id_ibu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `ref_imunisasi`
+-- AUTO_INCREMENT for table `ref_imunisasi`
 --
 ALTER TABLE `ref_imunisasi`
   MODIFY `id_imunisasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `ref_login`
+-- AUTO_INCREMENT for table `ref_login`
 --
 ALTER TABLE `ref_login`
   MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `ref_petugas`
+-- AUTO_INCREMENT for table `ref_petugas`
 --
 ALTER TABLE `ref_petugas`
   MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `ref_posyandu`
+-- AUTO_INCREMENT for table `ref_posyandu`
 --
 ALTER TABLE `ref_posyandu`
   MODIFY `id_posyandu` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `ref_vaksin`
+-- AUTO_INCREMENT for table `ref_vaksin`
 --
 ALTER TABLE `ref_vaksin`
   MODIFY `id_vaksin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
